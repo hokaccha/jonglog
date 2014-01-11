@@ -1,8 +1,8 @@
 extends ../layout
 
 block content
-    a(href="/groups/#{group.token}") #{group.title}
-    span  - 結果登録
+  a(href="/groups/#{group.token}") #{group.title}
+  span  - 結果登録
 
   form(method="post", action="/groups/#{group.token}")
     p
