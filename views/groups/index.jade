@@ -22,4 +22,4 @@ block content
       tr.total
         td Total
         td
-        td(ng-repeat="total in totals") {{total}}
+        td(ng-repeat="total in totals track by $index") {{total}}
