@@ -1,0 +1,10 @@
+extends ./layout
+
+block content
+  form(action="/groups", method="post")
+    div
+      input(type="text", name="title", placeholder="グループ名", require)
+    div
+      textarea(name="names", placeholder="参加者（改行区切り）", require)
+    div
+      input(type="submit")

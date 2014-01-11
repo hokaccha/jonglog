@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  div(ng-controller="MainCtrl")
+    h2 {{group.title}}
+
+    ul
+      li
+        a(href="/groups/#{group.token}/edit") 編集
+      li
+        a(href="/groups/#{group.token}/add") 結果登録
+
+    table
+      tr.head
+        th Title
+        th Date
+        th(ng-repeat="name in group.names") {{name}}
+      tr(ng-repeat="result in group.results")
+        td {{result.title}}
+        td {{result.date}}
+        td(ng-repeat="point in result.points track by $index") {{point}}
+      tr.total
+        td Total
+        td
+        td(ng-repeat="total in totals") {{total}}

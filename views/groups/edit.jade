@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h2
+    a(href="/groups/#{group.token}") #{group.title}
+    span  - 編集
+
+  form(method="post", action="/groups/#{group.token}")
+    input(type="hidden", name="_method", value="put")
+    div
+      input(type="text", name="title", value="#{group.title}", placeholder="グループ名", require)
+    div
+      textarea(name="names", placeholder="参加者（改行区切り）", require) #{group.names.join('\r\n')}
+    div
+      input(type="submit")

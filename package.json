@@ -1,0 +1,15 @@
+{
+  "name": "jonglog",
+  "version": "0.0.1",
+  "description": "jonglog",
+  "dependencies": {
+    "koa": "~0.2.1",
+    "monk": "~0.7.1",
+    "koa-route": "~1.0.2",
+    "co-body": "0.0.1",
+    "koa-static": "~1.4.2",
+    "co-views": "~0.1.0",
+    "jade": "~1.1.4",
+    "co-monk": "0.0.1"
+  }
+}
