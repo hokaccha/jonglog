@@ -11,5 +11,11 @@
     "co-views": "~0.1.0",
     "jade": "~1.1.4",
     "co-monk": "0.0.1"
+  },
+  "engines": {
+    "node": "0.11.x"
+  },
+  "scripts": {
+    "start": "node --harmony app.js"
   }
 }

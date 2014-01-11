@@ -13,7 +13,7 @@ var crypto = require('crypto');
 
 var app = koa();
 var render = views(__dirname + '/views', { map: { html: 'jade' } });
-var db = monk('localhost/jonglog');
+var db = monk(process.env.MONGOLAB_URI || 'localhost/jonglog');
 var groups = coMonk(db.get('groups'));
 
 app.use(static(__dirname + '/public'));
