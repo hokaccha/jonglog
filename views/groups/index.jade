@@ -1,23 +1,25 @@
 extends ../layout
 
 block content
-  div(ng-controller="MainCtrl")
-    h2 {{group.title}}
+  div.l-content(ng-controller="MainCtrl")
+    h2.title {{group.title}}
 
-    ul
+    ul.nav
       li
-        a(href="/groups/#{group.token}/edit") 編集
+        a(href="/groups/#{group.token}/edit")
+          i.fa.fa-users メンバー編集 
       li
-        a(href="/groups/#{group.token}/add") 結果登録
+        a(href="/groups/#{group.token}/add")
+          i.fa.fa-edit 結果登録
 
-    table
+    table.sheet
       tr.head
         th Title
         th Date
         th(ng-repeat="name in group.names") {{name}}
       tr(ng-repeat="result in group.results")
-        td {{result.title}}
-        td {{result.date}}
+        td.sheet-title {{result.title}}
+        td.sheet-date {{result.date}}
         td(ng-repeat="point in result.points track by $index") {{point}}
       tr.total
         td Total
