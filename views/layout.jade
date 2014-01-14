@@ -3,11 +3,15 @@ html(lang="ja", ng-app="app")
   head
     meta(charset="utf-8")
     title jonglog
+    link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Merienda:400,700")
+      
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
+    link(rel="stylesheet", href="/css/vendor/normalize.css")
     link(rel="stylesheet", href="/css/style.css")
     script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js")
     script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js")
     script(src="/js/app.js")
   body
-    h1
-      a(href="/") jonglog
+    h1.l-header
+      a.appname(href="/") jonglog
     block content
